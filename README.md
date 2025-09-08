@@ -21,10 +21,8 @@ Qui presento tutti i servizi che offro, sia nel campo dello sviluppo software ch
 
 ## Contatti
 Per qualsiasi richiesta o preventivo:  
-- Email: tuoindirizzo@email.com  
-- Telefono: +39 3XX XXX XXXX  
-- LinkedIn: [link al tuo profilo](https://www.linkedin.com/in/tuoprofilo)
-
+- Email: marco.ciani98@gmail.com  
+- LinkedIn: www.linkedin.com/in/marco-edi-ciani-18965b308
 ---
 
 **Note:**  
