@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MarcoEdiCianiPortfoglio</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+
+    <!-- navbar moderna -->
+<nav class="pill-navbar">
+    <ul>
+      <li><a href="#hero"> Home</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#assistenza">Assistenza</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+  
+  <!-- <div id="intro-screen">
+    <h1 class="intro-text">EDS GESTIONALI</h1>
+  </div> -->
+  
+  <!-- sezione hero -->
+  <header class="hero" id="hero">
+    <div class="container">
+      <i data-lucide="ghost" class = "ghost-icon" ></i>
+      <h1 class="hero-title">
+        ESPERIENZE DIGITALI<br>
+        <span class="sub">fluide, intuitive e leggere.</span>
+      </h1><p class = "sub">Come un fantasma</p>
+    </div>
+  </header>
+  
+  <!-- Sezione delle varie voci -->
+
+
+  <section class="servizi" id = "servizi">
+    <div class="container">
+        <h2>Cosa posso fare per te</h2>
+            <div class="servizi-container ">
+            <div class="card-carosello">
+              <i data-lucide="palette"></i>
+        
+                <h3>Design & Esperienza Web</h3>
+                <p>Mi occupo della creazione di siti web, offrendo soluzioni personalizzate pensate per valorizzare al meglio l'identità e gli obiettivi di ogni cliente.
+                    Realizzo siti vetrina e piattaforme online curate nei dettagli, intuitive da navigare e ottimizzate per garantire una presenza sul web efficace,
+                    professionale e in linea con le tue reali esigenze.</p>
+            </div>
+            <div class="card-carosello">
+              <i data-lucide="smartphone"></i>
+                <h3>App Mobile su Misura</h3>
+                <p>Sviluppo applicazioni personalizzate per iOS e Android, con soluzioni su misura per startup e aziende.
+                   Dalla progettazione UX/UI all'implementazione, applicazioni performanti, intuitive e scalabili </p>
+            </div>
+            <div class="card-carosello">
+              <i data-lucide="laptop"></i>
+                <h3>Software Desktop</h3>
+                <p>Sviluppo software gestionali Desktop, pensati per offrire stabilità, velocità e funzionalità su misura.
+                   Soluzioni complete per gestire vendite, magazzino, contabilità e tutte le attività aziendali direttamente dal tuo computer, in modo semplice e affidabile.</p>
+            </div>
+          </div>
+          </div>
+       
+        <!-- soluizione con tutto dentro la card molto basic 
+        <div class = "card">
+      <h2>Servizi</h2>
+      <p>il nostro obiettivo è realizzare soluzioni digitali su misura.</p>
+      <ul class="lista-servizi">
+        <li>→ Siti Web</li>
+        <li>→ E-Commerce</li>
+        <li>→ Gestionali Online</li>
+        <li>→ Gestionali Desktop</li>
+      </ul>
+     </div>-->
+    </div>
+  </section>
+  
+
+
+
+
+  <section class="about" id = "about">
+    <div class="container">
+        <div class = "card"> 
+         <h2 >Chi sono</h2>
+          <p>Classe 1998, laureando in Informatica all'Università degli Studi dell'Insubria di Varese. Con un piede nel mondo dell’hardware e l’altro nel software, mi occupo di creazione di esperienze digitali che siano tanto funzionali quanto accattivanti. Dalla progettazione di soluzioni su misura alla scrittura di codice, 
+            il mio scopo è trasformare idee complesse in soluzioni semplici e scalabili.</p>
+        </div>
+        <div class="carosello">
+          <div class="card-mini">
+            <h4>Mobile Development</h4>
+            <p>Kotlin,React</p>
+          </div>
+          <div class="card-mini">
+            <h4>Software Desktop</h4>
+            <p>Java,Python,<br> HTML,CSS</p>
+          </div>
+          <div class="card-mini">
+            <h4>Database</h4>
+            <p>MySQL,PostgreSQL,<br>Firebase</p>
+          </div>
+          <div class="card-mini">
+            <h4>Tools&FremaWork</h4>
+            <p>Git,GitHub</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+<section class="assistenza" id = "assistenza">
+    <div class="container">
+      
+         <h2>Assistenza</h2>
+         <p>Offro assistenza tecnica completa sia software che hardware.Soluzioni personalizzate per privati e aziende, con tempistiche rapide e professionalità garantita.
+          Potete inoltrare un richiesta specifica e vedremo come aiutarvi.</p>
+            
+            <button>Richiesta di Assistenza</button>
+          
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordionNew()">Montaggio PC <span class="accordion-icon">+</span></div>
+              <div class="accordion-content">
+                <p>Servizio di montaggio PC su misura: assemblaggio, configurazione hardware e installazione software di base in base alle esigenze</p>
+                <button>Consulta</button>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordionNew()">Riparazioni e Manutenizioni PC<span class="accordion-icon">+</span></div>
+              <div class="accordion-content">
+                <p>Riparazione e manutenzione hardware e software</p>
+                <button>Consulta</button>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordionNew()" >Supporto Remoto<span class="accordion-icon">+</span></div>
+              <div class="accordion-content">
+                <p>Supporto tecnico e assistenza remota per clienti</p>
+                <button>Consulta</button>
+              </div>
+            </div>
+            
+            <!-- <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordionNew()" >Programmi Utili<span class="accordion-icon">+</span></div>
+              <div class="accordion-content">
+                <p>Contenuto della sezione1</p>
+                <button>Consulta</button>
+              </div>
+            </div>-->
+
+
+
+          </div>
+
+
+
+
+          <!--<ul class="menu">
+            <li onclick="toggleCard('card1')">Consulta la Guida in linea</li>
+            <li onclick="toggleCard('card2')">Richiesta Assistenza</li>
+            <li onclick="toggleCard('card3')">Supporto Remoto</li>
+            <li onclick="toggleCard('card4')">Programmi Utili</li>
+          </ul>-->
+          
+          
+
+           
+            
+            <!-- stile con le card da sistemare-->
+            <!--<div class="card-assistenza" id = "card1">
+              <h3>Consulta la guida in linea</h3>
+              <div class="contenutonasc">
+                <p>dettagli</p>
+                <button>Dettaglio</button>
+              </div>
+            </div>
+
+            <div class="card-assistenza"id = "card2">
+              <h3>Rischiesta Assistenza</h3>
+              <div class="contenutonasc">
+                <p>dettagli</p>
+                <button>apri</button>
+              </div>
+            </div>
+
+            <div class=" card-assistenza"id = "card3">
+              <h3>Supporto Remoto</h3>
+              <div class="contenutonasc">
+                <p>dettagli</p>
+                <button>apri</button>
+              </div>
+            </div>
+            
+            <div class=" card-assistenza"id = "card4">
+              <h3>Programmi Utili</h3>
+              <div class="contenutonasc">
+                <p>dettagli</p>
+                <button>apri</button>
+              </div>
+            </div>   -->  
+          
+          
+          
+          
+      
+    </div>
+</section>
+  
+  
+  <section class="contatti"id = "contatti">
+    <div class="container">
+     <div class="card">    
+      <h2>Contatti</h2>
+      <p>📧 <a href="mailto:info@edsgestionali.com">marco.ciani98@gmail.com</a></p>
+      <p>📍 20815 Cogliate (MB) </p>
+     </div>
+    </div>
+  </section>
+  
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>NOTE LEGALI | PRIVACY E COOKIE POLICY | MODIFICA PREFERENZE <br>
+        Partita IVA 
+        ©2025 MEC – Tutti i diritti riservati</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+ <script>lucide.createIcons();</script>
+
+ <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+
+  <script>
+    function scrollCarosello(direzione){
+        const carosello = document.getElementById("carosello");
+        const scrollAmount = 300;
+        carosello.scrollBy({
+            left:direzione * scrollAmount,
+            behavior:"smooth"
+        });
+    }
+ </script>
+
+ <script>
+  function toggleCard(id) {
+    const tcard = document.querySelectorAll('.card-assistenza');
+    tcard.forEach(card => {
+      if(card.id !== id){
+        card.classList.remove('attiva')
+      }
+    });
+    const cardAttiva = document.getElementById(id);
+    cardAttiva.classList.toggle('attiva')
+
+
+  }
+ </script>
+
+ <script>
+  function toggleAccordion(clickHeader) {
+    // Seleziona tutte le card dell'accordion
+    const items = document.querySelectorAll('.accordion-item');
+    
+    items.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        
+        // Se l'elemento cliccato è proprio l'header, allora
+        if (header === clickHeader) {
+            // Toggle della classe 'attiva' per l'item cliccato
+            item.classList.toggle('active');
+        } else {
+            // Rimuove la classe 'attiva' da tutte le altre card
+            item.classList.remove('active');
+        }
+    });
+}
+ </script>
+
+<script>
+ function toggleAccordionNew(){
+  const accordionHeaders = document.querySelectorAll(".accordion-header");
+const accordionContents = document.querySelectorAll(".accordion-content");
+
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    const accordionItem = header.parentElement;
+    const accordionContent = accordionItem.querySelector(".accordion-content");
+
+    accordionContents.forEach((content) => {
+      if (content !== accordionContent) {
+        content.classList.remove("active");
+        content.style.maxHeight = "0";
+      }
+    });
+
+    accordionContent.classList.toggle("active");
+
+    if (accordionContent.classList.contains("active")) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+    } else {
+      accordionContent.style.maxHeight = "0";
+    }
+  });
+});
+
+
+ }
+ 
+</script>
+
+<script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("intro-screen")?.remove();
+    }, 3000);
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
