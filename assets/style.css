@@ -1,0 +1,606 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    /*background: linear-gradient(to bottom, #e0e0e0, #ffffff);*/
+    height: 200vh;
+  }
+html{scroll-behavior: smooth;}
+.spacer{height: 100px;}
+
+  
+  
+  
+  /* navbar a pillola */
+.pill-navbar {
+    position: fixed;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    padding: 8px 24px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 9999px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+  }
+  
+  .pill-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .pill-navbar li {
+    margin: 0 15px;
+  }
+  
+  .pill-navbar a {
+    color: #000;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+  }
+  
+  .pill-navbar a:hover {
+    background: rgba(0, 122, 255, 0.15);
+    color: #007aff;
+  }
+  
+ .titolo-minimal {
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+  
+/* hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ffffff;
+    /*margin-top: 80px;*/ 
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0a0a23;
+    text-align: center;
+    line-height: 1.2;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInTitle 1.2s ease forwards;
+  }
+  
+  .hero-title .sub{
+    display: block;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #4da6ff; /* azzurro elegante */
+    margin-top: 0.3rem;
+    opacity: 0;
+    animation: fadeInSub 2s ease 1.2s forwards;
+  }
+
+  p.sub{
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #88c6ff;
+    opacity: 0;
+    animation: fadeInGhost 2s ease 2.2s forwards;
+    margin-top: 0.5rem;
+  }
+
+  .hero .highlight {
+    color: #333;
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .container button {
+    width: 100; 
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .container button:hover {
+    background-color: rgba(0, 122, 255, 0.15); 
+    color: grey;
+  }
+ /*card delle sezioni*/
+  .card {
+    background-color: #f7f7f7; 
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 2rem; 
+    flex-shrink: 0;
+  }
+
+  .servizi-container {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+   
+  }
+  
+  
+  .p-1{padding: 10px}
+
+  /*card speciale per la sezione assistenza + il ul.menu dedicato per le soluzioni*/
+   ul.menu{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    margin: 2rem 0;
+   }
+
+   ul.menu li{
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: #e0e0e0;
+    border-radius: 12px;
+    transition: backgrounf 0.3s;
+   }
+
+   ul.menu li:hover{
+  background: #ccc;
+   }
+
+   .card-assistenza{
+    
+    background: #f2f2f2;
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+
+   }
+
+   .card-assistenza .contenutonasc{
+    margin-top: 1rem;
+   }
+
+   .card-assistenza.attiva{
+    max-height: 300px;
+    opacity: 1;
+   }
+
+   .card-assistenza.attiva .contenutonasc{
+    opacity: 1;
+    max-height: 200px;
+    
+   }
+
+   /*sezione assistenza cons tille accordion*/
+  /* Stile per il contenitore dell'accordion */
+  .accordion {
+    width: 100%;
+    border-radius: 24px;
+    margin: 0 auto;
+  }
+  
+  .accordion-item {
+    margin-bottom: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .accordion-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    border-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .accordion-header:hover{
+    background: rgba(0, 122, 255, 0.15);
+    color: #007aff;
+  }
+  
+  .accordion-content {
+    /* display: block; */
+    /* max-height: 1000px; */
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-height: 0;
+    display: none;
+  }
+  
+ 
+  
+  /* Icona di apertura/chiusura */
+  .accordion-icon {
+    transition: transform 0.5s ease;
+  }
+  
+  .accordion-item[active].accordion-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Gestisci la larghezza per i bottoni */
+  .accordion-content button {
+    width: 100; 
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-content button:hover {
+    background-color: rgba(0, 122, 255, 0.15); /* Cambia colore al passaggio del mouse */
+  }
+
+  .accordion-content.active {
+    display: block;
+  max-height: 1000px;
+  }
+
+
+  
+  /*carosello+wrapper per contenerlo e applicarci le frecce*/
+  .carosello{
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 2rem 1rem;
+    perspective: 1000px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+  }
+  
+  .carosello::-webkit-scrollbar{
+    display: none;
+  }
+
+  .carosello-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+
+ /*frecce per spostarsi nel carosello cosi evito la barra sotto*/
+  .freccia {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.15);
+    transition: background 0.3s;
+  }
+
+  .freccia:hover{
+    background-color: transparent;
+  }
+
+  .freccia.sinistra{
+    left:-10px
+  }
+
+  .freccia.destra{
+    right:-10px
+  }
+
+   /*card presenti nel carosello*/
+  .card-carosello {
+    flex: 0 0 auto;
+    position: relative;
+    flex-direction: column;
+    scroll-snap-align: center;
+    width: 250px;
+    padding: 2rem;
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 1.2rem;
+    transform: rotateY(5deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-carosello:hover{
+    transform: rotateY(0deg) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-carosello h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-carosello p{
+    font-size: 1.5rem;
+    color: #555;
+  }
+  
+  .card-mini {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 120px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  /* sezioni */
+  .about, .assistenza, .servizi, .contatti {
+    padding: 4rem 0;
+  }
+  
+  .about .card, .assistenza .card, .servizi .card, .contatti .card {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about h2, .assistenza h2, .servizi h2, .contatti h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .about p, .assistenza p, .servizi p, .contatti p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  /* Lista servizi */
+  .lista-servizi {
+    list-style: none;
+    padding: 0;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .lista-servizi li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Link e contatti */
+  .contatti a {
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px dotted #aaa;
+  }
+  
+  .contatti a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+  }
+  
+  /* footer */
+  .footer {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  section{
+    scroll-margin-top: 80px;
+  }
+
+  main {
+    padding-top: 100px;
+    text-align: center;
+  }
+  
+
+  #intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000000, #808080, #ffffff);
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s;
+  }
+  
+  .intro-text {
+    font-size: 2.8rem; /* Come il tuo .hero h1 */
+    font-weight: 600;
+    color: #333;
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  .ghost-icon {
+    width: 80px;
+    height: 80px;
+    color: #60a5fa;
+    animation: floatGhost 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatGhost {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+
+
+  @keyframes popIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes fadeInTitle {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInSub {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInGhost {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  @media (max-width: 991px) {
+    .servizi-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Due colonne per schermi piccoli */
+        gap: 1.5rem;
+        margin: 2rem auto;
+        max-width: 1000px;
+        padding: 0 1rem;
+        justify-content: center;
+      }
+    
+      .pill-navbar {
+        flex-direction: column; /* Navbar a colonna per schermi piccoli */
+        align-items: center;
+      }
+  }
+  
+  @media (max-width: 768px) {
+    .servizi-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Due colonne per schermi piccoli */
+        gap: 1.5rem;
+        margin: 2rem auto;
+        max-width: 1000px;
+        padding: 0 1rem;
+        justify-content: center;
+      }
+    
+      .pill-navbar {
+        flex-direction: column; /* Navbar a colonna per schermi piccoli */
+        align-items: center;
+      }
+  }
+  @media (max-width: 768px) {
+    .servizi-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Due colonne per schermi piccoli */
+        gap: 1.5rem;
+        margin: 2rem auto;
+        max-width: 1000px;
+        padding: 0 1rem;
+        justify-content: center;
+      }
+    
+      .pill-navbar {
+        flex-direction: column; /* Navbar a colonna per schermi piccoli */
+        align-items: center;
+      }
+  }
