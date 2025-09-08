@@ -10,6 +10,7 @@ Qui presento tutti i servizi che offro, sia nel campo dello sviluppo software ch
 ### Siti Web e Applicazioni
 - Progettazione e sviluppo di siti web responsive  
 - Sviluppo di software gestionale per negozi  
+- Sviluppo di applicazioni per piattaforme mobili (Android)  
 - Configurazione e manutenzione di database
 
 ### PC e Hardware
